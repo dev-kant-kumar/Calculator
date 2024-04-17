@@ -1,0 +1,145 @@
+.calculator-icon{
+    width:35px; 
+}
+#calculator-section{
+    height:90vh;
+    width:30vw;
+    background-color:#002147;
+    border:3px solid #31363F;
+    border-radius:10px;
+    margin:auto;
+}
+.display{
+    height:18vh;
+    width:93%;
+    background-color:#282C35;
+    border:2px solid lightgray;
+    border-radius:10px;
+    margin:12px auto;
+    padding-top:3px;
+}
+#calculations{
+    height:8vh;
+    width:90%;
+    padding:10px;
+    /* border:2px solid white; */
+    border-radius:10px;
+    margin:auto;
+    color:white;
+}
+#answers{
+    height:5vh;
+    width:90%;
+    /* border:0.1px solid white; */
+    border-radius:11px;
+    margin: 1px auto;
+    color:white;
+
+}
+.btns-container{
+    height:65vh;
+    width:98%;
+    /* border:2px solid #0E46A3; */
+    margin:auto;
+    padding:2px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    flex-wrap:wrap;
+}
+.btns{
+    height:6vw;
+    width:6vw;
+    border:2px solid lightgray;
+    border-radius:10px;
+    
+}
+.btns p{
+    text-align:center;
+    font-size:25px;
+}
+.operator{
+    background-color:#2196F3;
+    color:white;
+}
+.operator:hover{
+    background-color:#0E46A3;
+}
+.operator:active{
+    background-color:#1E0342;
+}
+.num{
+    background-color:white;
+}
+.num:hover{
+    background-color:#9AC8CD;
+    color:white;
+}
+.num:active{
+    background-color:#001d3d;
+    color:white;
+}
+
+                                        /* ResponsiveNess Section */
+@media (max-width:767px){
+    #calculator-section{
+        height:80vh;
+        width:75vw;
+    }
+    .btns-container{
+        height:55vh;
+        width:97%;
+    }
+    .btns{
+        height:15vw;
+        width:15vw;
+        
+    }
+    .btns p{
+        text-align:center;
+        font-size:20px;
+    }
+
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #calculator-section{
+        height:80vh;
+        width:75vw;
+    }
+    .btns-container{
+        height:55vh;
+        width:97%;
+    }
+    .btns{
+        height:15vw;
+        width:15vw;
+        
+    }
+    .btns p{
+        text-align:center;
+        font-size:20px;
+    }
+    
+  }
+
+/* @media (min-width:600px){
+    #calculator-section{
+        height:80vh;
+        width:75vw;
+    }
+    .btns-container{
+        height:55vh;
+        width:97%;
+    }
+    .btns{
+        height:15vw;
+        width:15vw;
+        
+    }
+    .btns p{
+        text-align:center;
+        font-size:20px;
+    }
+} */
+                                        
