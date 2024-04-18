@@ -16,14 +16,14 @@ Try out the calculator live [here](https://dev-kant-kumar.github.io/Calculator/)
 
 This calculator supports the following operations:
 
-- Addition (+): Click the "+" button to add numbers together.
-- Subtraction (-): Click the "-" button to subtract numbers.
+- Addition (+):       Click the "+" button to add numbers together.
+- Subtraction (-):    Click the "-" button to subtract numbers.
 - Multiplication (×): Click the "×" button to multiply numbers.
-- Division (÷): Click the "÷" button to divide numbers.
-- Modulus (%): Click the "%" button to calculate the remainder of division.
-- Decimal numbers: Use the "." button to input decimal numbers.
-- Cancel: Click the "X" button to delete the last entered character.
-- Clear (C): Click the "C" button to clear the entire calculation.
+- Division (÷):       Click the "÷" button to divide numbers.
+- Modulus (%):        Click the "%" button to calculate the remainder of division.
+- Decimal numbers:    Click the "." button to input decimal numbers.
+- Cancel:             Click the "X" button to delete the last entered character.
+- Clear (C):          Click the "C" button to clear the entire calculation.
 
 ## Contributing
 
