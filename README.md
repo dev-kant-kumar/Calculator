@@ -1,6 +1,8 @@
 # Calculator Web App
-![Screenshot 2024-04-17 182250](https://github.com/dev-kant-kumar/Calculator/assets/101362859/d488e947-67bb-465f-bf91-8d6c83c78113)
-![Screenshot 2024-04-17 182316](https://github.com/dev-kant-kumar/Calculator/assets/101362859/5f0e4586-f1ab-4eb0-bcd6-28260fc242d9)
+![Screenshot 2024-04-18 104354](https://github.com/dev-kant-kumar/Calculator/assets/101362859/01bf635e-05a2-4e5a-8a45-80aca8de95bb)
+![Screenshot 2024-04-18 104507](https://github.com/dev-kant-kumar/Calculator/assets/101362859/9e54a7fd-d95d-4b2b-8a44-366e660829e1)
+
+
 
 
 
