@@ -30,9 +30,12 @@ let num0=document.querySelector('#btn-0');
 
 function calculate(currentInput){
 
+    if (currentInput === '0' && input.startsWith('0')) {
+        input = input.slice(1);
+    }
     input+=currentInput;
     calculationPanel.innerText=`${input}`
-    solution=eval(input);
+    solution=eval((input));
     answersPanel.innerText=`${solution}`;
 
 
@@ -46,7 +49,14 @@ clearBtn.addEventListener("click",()=>{
     solution=null;
 
 });
-// cancelBtn.addEventListener();
+cancelBtn.addEventListener("click",()=>{
+    input=input.slice(0,-1);
+    calculationPanel.innerText=`${input}`;
+    solution=eval((input));
+    answersPanel.innerText=`${solution}`;
+
+});
+
 // SwapCalculator.addEventListener();
 
                                             // Operators  Event Section

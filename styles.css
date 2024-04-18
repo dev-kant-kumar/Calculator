@@ -2,7 +2,7 @@
     width:35px; 
 }
 #calculator-section{
-    height:90vh;
+    height:90dvh;
     width:30vw;
     background-color:#002147;
     border:3px solid #31363F;
@@ -52,10 +52,12 @@
     width:6vw;
     border:2px solid lightgray;
     border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     
 }
 .btns p{
-    text-align:center;
     font-size:25px;
 }
 .operator{
