@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function inputDigit(digit) {
         const { displayValue, waitingForSecondOperand } = calculator;
 
-        if (waitingForSecondOperand === true) {
+        if (waitingForSecondOperand) {
             calculator.displayValue = digit;
             calculator.waitingForSecondOperand = false;
         } else {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function inputDecimal(dot) {
-        if (calculator.waitingForSecondOperand === true) return;
+        if (calculator.waitingForSecondOperand) return;
 
         if (!calculator.displayValue.includes(dot)) {
             calculator.displayValue += dot;
@@ -75,11 +75,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
-        if (firstOperand == null && !isNaN(inputValue)) {
+        if (firstOperand == null) {
             calculator.firstOperand = inputValue;
         } else if (operator) {
             const result = calculate(firstOperand, inputValue, operator);
-
             calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
             calculator.firstOperand = result;
         }
@@ -106,8 +105,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const { firstOperand, displayValue, operator } = calculator;
         const inputValue = parseFloat(displayValue);
 
-        if (operator && calculator.waitingForSecondOperand) {
-            calculator.displayValue = calculate(firstOperand, inputValue, operator);
+        if (operator && firstOperand != null) {
+            const result = calculate(firstOperand, inputValue, operator);
+            calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
             calculator.firstOperand = null;
             calculator.operator = null;
             calculator.waitingForSecondOperand = false;
