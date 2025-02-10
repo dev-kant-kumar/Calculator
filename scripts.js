@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (operator && calculator.waitingForSecondOperand) {
             calculator.operator = nextOperator;
-            calculator.displayValue = `${calculator.displayValue.slice(0, -1)} ${nextOperator}`;
+            calculator.displayValue = `${calculator.displayValue} ${nextOperator}`;
             return;
         }
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             calculator.firstOperand = inputValue;
         } else if (operator) {
             const result = calculate(firstOperand, inputValue, operator);
-            calculator.displayValue = `${parseFloat(result.toFixed(7))} ${nextOperator}`;
+            calculator.displayValue = `${result} ${nextOperator}`;
             calculator.firstOperand = result;
         } else {
             calculator.displayValue = `${calculator.displayValue} ${nextOperator}`;
@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function handleEqualSign() {
         const { firstOperand, displayValue, operator } = calculator;
-        const inputValue = parseFloat(displayValue.split(' ')[0]);
+        const secondOperand = parseFloat(displayValue.split(' ').pop());
 
         if (operator && firstOperand != null) {
-            const result = calculate(firstOperand, inputValue, operator);
-            calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+            const result = calculate(firstOperand, secondOperand, operator);
+            calculator.displayValue = `${result}`;
             calculator.firstOperand = null;
             calculator.operator = null;
             calculator.waitingForSecondOperand = false;
