@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         if (operator && calculator.waitingForSecondOperand) {
             calculator.operator = nextOperator;
+            calculator.displayValue = `${calculator.displayValue.slice(0, -1)} ${nextOperator}`;
             return;
         }
 
@@ -79,8 +80,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             calculator.firstOperand = inputValue;
         } else if (operator) {
             const result = calculate(firstOperand, inputValue, operator);
-            calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+            calculator.displayValue = `${parseFloat(result.toFixed(7))} ${nextOperator}`;
             calculator.firstOperand = result;
+        } else {
+            calculator.displayValue = `${calculator.displayValue} ${nextOperator}`;
         }
 
         calculator.waitingForSecondOperand = true;
@@ -103,7 +106,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function handleEqualSign() {
         const { firstOperand, displayValue, operator } = calculator;
-        const inputValue = parseFloat(displayValue);
+        const inputValue = parseFloat(displayValue.split(' ')[0]);
 
         if (operator && firstOperand != null) {
             const result = calculate(firstOperand, inputValue, operator);
